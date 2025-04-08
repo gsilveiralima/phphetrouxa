@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Felipe na Onda (Versão Divertida)</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #83a4d4, #b6fbff);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-align: center;
+      padding: 50px;
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    h1 {
+      color: #fff;
+      text-shadow: 2px 2px 4px #000;
+      margin: 20px 0;
+    }
+    p {
+      color: #ffffff;
+      max-width: 600px;
+      line-height: 1.5;
+      margin: 20px auto;
+      text-shadow: 1px 1px 2px #000;
+    }
+    img {
+      max-width: 300px;
+      height: auto;
+      border-radius: 15px;
+      margin: 20px 0;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s ease;
+    }
+    img:hover {
+      transform: scale(1.05);
+    }
+    button {
+      background-color: #ff6600;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 18px;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      margin-top: 10px;
+    }
+    button:hover {
+      background-color: #e65c00;
+      transform: scale(1.05);
+    }
+    #mensagem {
+      margin-top: 30px;
+      font-size: 20px;
+      color: #fff;
+      text-shadow: 1px 1px 2px #000;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+    #mensagem.visible {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <h1>Bem-vindo ao Felipe na Onda!</h1>
+  <p>
+    Aqui, você vai pegar a crista da onda sem precisar nem de prancha! 
+    Fique à vontade para surfar neste site repleto de diversão, vídeos de gatinhos 
+    e memes totalmente aleatórios — porque todo site merece um toque de loucura.
+  </p>
+  <img src="felipe.jpg" alt="Felipe na Onda">
+  <button onclick="mostrarMensagem()">Clique Aqui</button>
+  <div id="mensagem"></div>
+
+  <script>
+    function mostrarMensagem() {
+      const mensagemDiv = document.getElementById('mensagem');
+      mensagemDiv.innerText = 'Valeu por dar um mergulho com a gente! Volte sempre e traga a pipoca!';
+      mensagemDiv.classList.add('visible');
+    }
+  </script>
+</body>
+</html>
